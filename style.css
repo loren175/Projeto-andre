@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  zoom: 99%;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background: #cb356b;
+  background: -webkit-linear-gradient(to right, #bd3f32, #cb356b);
+  background: linear-gradient(to right, #bd3f32, #cb356b);
+  font-size: 1.6rem;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+body,
+button,
+input {
+  font-family: "DM Sans", sans-serif;
+}
+
+main {
+  background: #ff7671;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.6rem;
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+
+  width: min(42.8rem, 90%);
+  margin-top: 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+  color: white;
+  text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+}
+
+form {
+  margin-top: 4.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.prices {
+  color: white;
+  text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+  margin-right: 1rem;
+}
+
+input,
+button {
+  border: none;
+  padding: 1.6rem;
+  margin-bottom: 0.1rem;
+}
+
+input {
+  background-color: #dce2e9;
+  width: 10rem;
+  border-radius: 0.4rem;
+}
+
+button {
+  background-color: #bd3f32;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #cb356b;
+}
+
+.results {
+  background: #ff7671;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.6rem;
+  padding: 1rem 6.4rem 1rem 6.4rem;
+
+  margin-top: 2rem;
+
+  width: min(42.8rem, 90%);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+}
+
+#p2 {
+  color: #9ddb50
+}

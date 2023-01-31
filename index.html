@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="./assets/icon2.ico" type="image/x-icon" />
+
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div>
+        <h1>Calculadora de gastos</h1>
+        <form action="">
+          <div class="prices">
+            <p>Digite o preço da compra:</p>
+            <input id="price1" type="number" />
+            <p>Digite o preço da embalagem:</p>
+            <input id="price2" type="number" />
+            <p>Digite o preço da etiqueta:</p>
+            <input id="price3" type="number" />
+            <p>Digite o preço do envio:</p>
+            <input id="price4" type="number" />
+            <p>Digite o preço da fotografia:</p>
+            <input id="price5" type="number" />
+            <p>Desconto (R$):</p>
+            <input id="discount" type="number" />
+          </div>
+
+          <button id="calculate">Clique para calcular</button>
+        </form>
+      </div>
+    </main>
+    <footer class="results">
+      Resultados:
+      <p></p>
+      <p id="p2"></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
