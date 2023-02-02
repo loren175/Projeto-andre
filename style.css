@@ -9,6 +9,17 @@
   font-size: 62.5%;
 }
 
+.logo {
+  position: fixed;
+  left: 2rem;
+  bottom: 2rem;
+  mix-blend-mode: multiply;
+}
+
+.logo img {
+  width: 10rem;
+}
+
 body {
   background: #cb356b;
   background: -webkit-linear-gradient(to right, #bd3f32, #cb356b);
@@ -25,7 +36,7 @@ input {
   font-family: "DM Sans", sans-serif;
 }
 
-main {
+.container {
   background: #ff7671;
   box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
   border-radius: 0.6rem;
@@ -36,9 +47,14 @@ main {
   text-align: center;
 }
 
-h1 {
+.hide {
+  display: none;
+}
+
+h1,
+h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   margin-bottom: 1.6rem;
   color: white;
   text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
@@ -50,7 +66,8 @@ form {
   justify-content: center;
 }
 
-.prices {
+.prices,
+.infos {
   color: white;
   text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
   margin-right: 1rem;
@@ -66,6 +83,12 @@ button {
 input {
   background-color: #dce2e9;
   width: 10rem;
+  border-radius: 0.4rem;
+}
+
+.infos input {
+  background-color: #dce2e9;
+  width: 27rem;
   border-radius: 0.4rem;
 }
 
@@ -98,5 +121,13 @@ button:hover {
 }
 
 #p2 {
-  color: #9ddb50
+  color: #9ddb50;
+}
+
+/* screen2 */
+
+#p3 {
+  color: white;
+  text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+  margin: 2rem;
 }
