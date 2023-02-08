@@ -10,26 +10,6 @@ const inputNumber4 = document.querySelector("#price4")
 const inputNumber5 = document.querySelector("#price5")
 const inputNumber6 = document.querySelector("#discount")
 
-const inputInfo1 = document.querySelector("#info1")
-const inputInfo2 = document.querySelector("#info2")
-const inputInfo3 = document.querySelector("#info3")
-const inputInfo4 = document.querySelector("#info4")
-const inputInfo5 = document.querySelector("#info5")
-const inputInfo6 = document.querySelector("#info6")
-const inputInfo7 = document.querySelector("#info7")
-
-const infos = [
-  {
-    name: inputInfo1.value,
-    number: inputInfo2.value,
-    product: inputInfo3.value,
-    email: inputInfo4.value,
-    instagram: inputInfo5.value,
-    adress: inputInfo6.value,
-    zipcode: inputInfo7.value,
-  },
-]
-
 const calculate = document.querySelector("#calculate")
 const results = document.querySelector(".results")
 const clients = document.querySelector("#clients")
@@ -75,17 +55,34 @@ function calculator(event) {
 
 function signUp(event) {
   event.preventDefault()
+  const name = document.querySelector("#info1")
+  const number = document.querySelector("#info2")
+  const product = document.querySelector("#info3")
+  const email = document.querySelector("#info4")
+  const instagram = document.querySelector("#info5")
+  const adress = document.querySelector("#info6")
+  const zipcode = document.querySelector("#info7")
+  
+  const value1 = name.value
+  const value2 = number.value
+  const value3 = product.value
+  const value4 = email.value
+  const value5 = instagram.value
+  const value6 = adress.value
+  const value7 = zipcode.value
+  
+  screen2.querySelector("#p3").innerText = 
+      `Nome: ${value1} 
+      \n Número: ${value2} 
+      \n Produto: ${value3} 
+      \n Email: ${value4} 
+      \n Instagram: ${value5} 
+      \n Endereço: ${value6} 
+      \n CEP: ${value7}`
+    
+  }
 
-  screen2.querySelector("#p3").innerText = `Nome: ${infos.name} 
-  \n Número: ${infos.number} 
-  \n Produto: ${infos.product} 
-  \n Email: ${infos.email} 
-  \n Instagram: ${infos.instagram} 
-  \n Endereço: ${infos.adress} 
-  \n CEP: ${infos.zipcode}`
 
-  /* necessário criar memória da página e if para não aparecer dados incompletos*/
-}
 
 calculate.addEventListener("click", calculator)
 btnChange.addEventListener("click", handleChangeClick)
