@@ -13,7 +13,7 @@
   position: fixed;
   left: 2rem;
   bottom: 2rem;
-  mix-blend-mode: multiply;
+  opacity: 55%;
 }
 
 .logo img {
@@ -45,6 +45,12 @@ input {
   width: min(42.8rem, 90%);
   margin-top: 1rem;
   text-align: center;
+
+  animation-name: downup;
+  animation-duration: 500ms;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .hide {
@@ -64,6 +70,10 @@ form {
   margin-top: 4.8rem;
   display: flex;
   justify-content: center;
+}
+
+#infoTag {
+  color: white;
 }
 
 .prices,
@@ -96,6 +106,7 @@ button {
   background-color: #bd3f32;
   color: white;
   font-weight: bold;
+  font-size: medium;
   border-radius: 0.4rem;
   cursor: pointer;
   transition: background 0.3s;
@@ -118,6 +129,12 @@ button:hover {
   font-family: "Montserrat", sans-serif;
   color: white;
   text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+
+  animation-name: downup;
+  animation-duration: 500ms;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 #p2 {
@@ -130,4 +147,24 @@ button:hover {
   color: white;
   text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
   margin: 2rem;
+}
+
+/* p space */
+
+p {
+  margin-top: 1.2rem;
+  color: #33001b;
+}
+
+/* keyframe */
+
+@keyframes downup {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }

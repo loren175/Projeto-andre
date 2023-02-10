@@ -1,3 +1,5 @@
+let history = []
+
 const screen1 = document.querySelector(".screen1")
 const screen2 = document.querySelector(".screen2")
 const btnChange = document.querySelector("#btnChange")
@@ -53,38 +55,49 @@ function calculator(event) {
   }
 }
 
-function signUp(event) {
-  event.preventDefault()
-  const name = document.querySelector("#info1")
-  const number = document.querySelector("#info2")
-  const product = document.querySelector("#info3")
-  const email = document.querySelector("#info4")
-  const instagram = document.querySelector("#info5")
-  const adress = document.querySelector("#info6")
-  const zipcode = document.querySelector("#info7")
-  
-  const value1 = name.value
-  const value2 = number.value
-  const value3 = product.value
-  const value4 = email.value
-  const value5 = instagram.value
-  const value6 = adress.value
-  const value7 = zipcode.value
-  
-  screen2.querySelector("#p3").innerText = 
-      `Nome: ${value1} 
-      \n Número: ${value2} 
-      \n Produto: ${value3} 
-      \n Email: ${value4} 
-      \n Instagram: ${value5} 
-      \n Endereço: ${value6} 
-      \n CEP: ${value7}`
-    
+function addClient() {
+  if (localStorage.myArr) {
+    history = JSON.parse(localStorage.getItem("myArr"))
   }
 
+  let newClient1 = document.getElementById("info1").value
+  let newClient2 = document.getElementById("info2").value
+  let newClient3 = document.getElementById("info3").value
+  let newClient4 = document.getElementById("info4").value
+  let newClient5 = document.getElementById("info5").value
+  let newClient6 = document.getElementById("info6").value
+  let newClient7 = document.getElementById("info7").value
+  history.push(
+    newClient1,
+    newClient2,
+    newClient3,
+    newClient4,
+    newClient5,
+    newClient6,
+    newClient7
+  )
+  localStorage.myArr = JSON.stringify(history)
+}
 
+function showClient() {
+  let clientHistory = document.getElementById("p3")
+  clientHistory.innerHTML = ""
+  if (localStorage.myArr) {
+    history = JSON.parse(localStorage.getItem("myArr"))
+  }
+
+  for (var i in history) {
+    let p = document.createElement("p")
+    p.innerHTML = "Dados: " + history[i]
+    clientHistory.append(p)
+  }
+}
+
+function clearClients() {
+  history = []
+  localStorage.myArr = JSON.stringify(history)
+}
 
 calculate.addEventListener("click", calculator)
 btnChange.addEventListener("click", handleChangeClick)
 btnBack.addEventListener("click", handleBackClick)
-send.addEventListener("click", signUp)

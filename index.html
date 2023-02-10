@@ -20,48 +20,89 @@
     <main>
       <div class="logo">
         <img
-          src="./assets/logo2.jpeg"
+          src="./assets/logo2.png"
           alt="Circulo rosa com as letras bf escritas em branco ao centro"
         />
       </div>
 
       <div class="screen2 hide">
         <div class="container">
-          <div  id="clients">
+          <div id="clients">
             <h2>Histórico:</h2>
-            <p id="p3">Os clientes cadastrados irão aparecer aqui.</p>
-            <button id="btnBack">Clique para retornar</button>
+            <p id="p3"></p>
 
+            <button id="btnBack">Clique para retornar 🏠</button>
+
+            <form action="">
+              <button id="" clearAll onclick="clearClients()">Limpar ❌</button>
+            </form>
           </div>
         </div>
       </div>
       <div class="screen1">
         <div class="container">
           <h1>Cadastros:</h1>
-          <button id="btnChange">Clique para visualizar</button>
+          <button id="btnChange" onclick="showClient()">
+            Clique para visualizar 🔍
+          </button>
         </div>
 
         <div class="container">
           <h2>Informações do cliente</h2>
           <form action="">
             <div class="infos">
-              <p>Digite o nome do cliente:</p>
-              <input id="info1" type="text" />
-              <p>Digite o número do cliente:</p>
-              <input id="info2" type="tel" />
-              <p>Digite o produto do cliente:</p>
-              <input id="info3" type="text" />
-              <p>Digite o email do cliente:</p>
-              <input id="info4" type="email" />
-              <p>Digite o instagram do cliente:</p>
-              <input id="info5" type="text" />
-              <p>Digite o endereço cliente:</p>
-              <input id="info6" type="text" />
-              <p>Digite o CEP do cliente:</p>
-              <input id="info7" type="text" />
+              <p id="infoTag">Digite o nome do cliente:</p>
+              <input
+                placeholder="Ex: Marina"
+                class="inputInfos"
+                id="info1"
+                type="text"
+              />
+              <p id="infoTag">Digite o número do cliente:</p>
+              <input
+                placeholder="Ex: 11 999999999"
+                class="inputInfos"
+                id="info2"
+                type="tel"
+              />
+              <p id="infoTag">Digite o produto do cliente:</p>
+              <input
+                placeholder="Ex: Camiseta PP"
+                class="inputInfos"
+                id="info3"
+                type="text"
+              />
+              <p id="infoTag">Digite o email do cliente:</p>
+              <input
+                placeholder="Ex: cliente@gmail.com"
+                class="inputInfos"
+                id="info4"
+                type="email"
+              />
+              <p id="infoTag">Digite o instagram do cliente:</p>
+              <input
+                placeholder="Ex: @cliente.sp"
+                class="inputInfos"
+                id="info5"
+                type="text"
+              />
+              <p id="infoTag">Digite o endereço cliente:</p>
+              <input
+                placeholder="Ex: Rua Oscar Freire 164"
+                class="inputInfos"
+                id="info6"
+                type="text"
+              />
+              <p id="infoTag">Digite o CEP do cliente:</p>
+              <input
+                placeholder="Ex: 12121-121"
+                class="inputInfos"
+                id="info7"
+                type="text"
+              />
             </div>
 
-            <button id="send">Enviar</button>
+            <button id="send" onclick="addClient()">Enviar ✅</button>
           </form>
         </div>
 
@@ -69,26 +110,26 @@
           <h2>Calculadora de gastos</h2>
           <form action="">
             <div class="prices">
-              <p>Digite o preço da compra:</p>
-              <input id="price1" type="number" />
-              <p>Digite o preço da embalagem:</p>
-              <input id="price2" type="number" />
-              <p>Digite o preço da etiqueta:</p>
-              <input id="price3" type="number" />
-              <p>Digite o preço do envio:</p>
-              <input id="price4" type="number" />
-              <p>Digite o preço da fotografia:</p>
-              <input id="price5" type="number" />
-              <p>Desconto (R$):</p>
-              <input id="discount" type="number" />
+              <p id="infoTag">Digite o preço da compra:</p>
+              <input placeholder="Ex: 10,00" id="price1" type="number" />
+              <p id="infoTag">Digite o preço da embalagem:</p>
+              <input placeholder="Ex: 10,00" id="price2" type="number" />
+              <p id="infoTag">Digite o preço da etiqueta:</p>
+              <input placeholder="Ex: 10,00" id="price3" type="number" />
+              <p id="infoTag">Digite o preço do envio:</p>
+              <input placeholder="Ex: 10,00" id="price4" type="number" />
+              <p id="infoTag">Digite o preço da fotografia:</p>
+              <input placeholder="Ex: 10,00" id="price5" type="number" />
+              <p id="infoTag">Desconto (R$):</p>
+              <input placeholder="Ex: 10,00" id="discount" type="number" />
             </div>
 
-            <button id="calculate">Clique para calcular</button>
+            <button id="calculate">Clique para calcular 💲</button>
           </form>
         </div>
         <footer class="results">
           Resultados:
-          <p></p>
+          <p id="infoTag"></p>
           <p id="p2"></p>
         </footer>
       </div>
