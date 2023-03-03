@@ -1,4 +1,4 @@
-# Controle Interno de loja (Em andamento)
+# Controle Interno de loja
 
 ![preview](./assets/preview.png)
 
