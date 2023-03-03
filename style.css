@@ -143,17 +143,9 @@ button:hover {
 
 /* screen2 */
 
-#p3 {
-  color: white;
-  text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
-  margin: 2rem;
-}
-
-/* p space */
-
 p {
   margin-top: 1.2rem;
-  color: #E1E1E1;
+  color: #f0f0f0;
   text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
 }
 
