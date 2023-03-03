@@ -38,9 +38,16 @@ function showClient() {
   }
 }
 
-function clearClients() { 
-  history = []
-  localStorage.myArr = JSON.stringify(history)
+function clearClients() {
+  if (
+    confirm("Tem certeza de que deseja apagar todos os itens da lista?") ==
+    false
+  ) {
+    return
+  } else {
+    history = []
+    localStorage.myArr = JSON.stringify(history)
+  }
 }
 
 export { addClient, showClient, clearClients }
